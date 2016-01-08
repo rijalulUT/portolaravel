@@ -19,12 +19,14 @@ Route::get('/', function () {
 //     return view('porto.index');
 // });
 
-Route::get('/master', function () {
-    return view('layout.master');
+Route::get('master', function () {
+    return view('jabatan.main');
 });
 
-// Route::get('/jabatan', function () {
-//     return view('Jabatan.index');
-// });
-
+Route::get('coba', function () {
+    return view('GUI.coba');
+});
+Route::get('test', function () {
+    return view('jabatan.main');
+});
 Route::resource('jabatan','Master\JabatanController');

@@ -6,21 +6,23 @@
 <link rel="stylesheet" href="assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
 @endsection
 
+@section('title')
+Master Pejabat
+@endsection
+
+@section('title2')
+Master Pejabat
+@endsection
+
+@section('header_title')
+List Master Pejabat
+@endsection
 @section('content')
 
   <!-- Table Details -->
-						<section class="panel">
-							<header class="panel-heading">
-								<div class="panel-actions">
-									<a href="#" class="fa fa-caret-down"></a>
-									<a href="#" class="fa fa-times"></a>
-								</div>
-								<h2 class="panel-title">Table Master Jabatan</h2>
-							</header>
-							<div class="panel-body">
               <a href="{{url('/jabatan/create')}}" class="btn btn-success">Tambah Data</a>
-              <br>
-              <br>
+							<br>
+							<br>
 								<table class="table table-bordered table-striped mb-none" id="datatable-default">
 									<thead>
 										<tr>
@@ -59,26 +61,32 @@
                     @endforeach
 									</tbody>
 								</table>
-							</div>
-						</section>
+
             <!-- END Table Details -->
 					<!-- end: page -->
 
     @endsection
 
     @section('css_footer')
+
     <!-- Specific Page Vendor -->
     <script src="assets/vendor/select2/select2.js"></script>
     <script src="assets/vendor/jquery-datatables/media/js/jquery.dataTables.js"></script>
     <script src="assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js"></script>
     <script src="assets/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>
 
+		<!-- Theme Base, Components and Settings -->
+		<script src="assets/javascripts/theme.js"></script>
+
+		<!-- Theme Custom -->
+		<script src="assets/javascripts/theme.custom.js"></script>
+
+		<!-- Theme Initialization Files -->
+		<script src="assets/javascripts/theme.init.js"></script>
 
     <!-- Examples -->
     <script src="assets/javascripts/tables/examples.datatables.default.js"></script>
     <script src="assets/javascripts/tables/examples.datatables.row.with.details.js"></script>
     <script src="assets/javascripts/tables/examples.datatables.tabletools.js"></script>
-    @endsection
 
-	</body>
-</html>
+    @endsection

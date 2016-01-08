@@ -1,5 +1,19 @@
-@extends('layout/master')
+@extends('layout.master')
+
+@section('title')
+Master Pejabat
+@endsection
+
+@section('title2')
+Master Pejabat
+@endsection
+
+@section('header_title')
+Lihat Data Pejabat
+@endsection
+
 @section('content')
+<section class="panel">
     <h1>Biodata Mahasiswa</h1>
     <form class="form-horizontal">
         <div class="form-group">
@@ -26,4 +40,5 @@
             </div>
         </div>
     </form>
-@stop
+</section>
+@endsection

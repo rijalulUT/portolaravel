@@ -2,7 +2,38 @@
 <html class="fixed">
 
 	<head>
+	<style>
+			body {
+					margin: 0;
+					padding: 0;
+					width: 100%;
+					height: 90px;
+					color: #B0BEC5;
+					display: table;
+					font-weight: 100;
+					font-family: 'Lato';
+			}
 
+			.container {
+					text-align: center;
+					display: table-cell;
+					vertical-align: middle;
+			}
+
+			.content {
+					text-align: center;
+					display: inline-block;
+			}
+
+			.title {
+					font-size: 96px;
+					margin-bottom: 40px;
+			}
+
+			.quote {
+					font-size: 24px;
+			}
+	</style>
 		<!-- Basic -->
 		<meta charset="UTF-8">
 
@@ -326,17 +357,12 @@
 					</header>
 
 					<!-- start: page -->
-					<section class="panel">
-						<header class="panel-heading">
-							<div class="panel-actions">
-								<a href="#" class="fa fa-caret-down"></a>
-								<a href="#" class="fa fa-times"></a>
-							</div>
-							<h2 class="panel-title">@yield('header_title')</h2>
-						</header>
-						<div class="panel-body">
-					  @yield('content')
-						</div>
+					<div class="container">
+	            <div class="content">
+								<br><br><br><br><br><br><br><br><br><br><br>
+	                <div class="title">Selamat Datang</div>
+	            </div>
+	        </div>
 					<!-- end: page -->
 					</section>
 				</section>
