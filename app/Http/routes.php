@@ -23,6 +23,8 @@ Route::get('/master', function () {
     return view('layout.master');
 });
 
-Route::get('/pagination', function () {
-    return view('GUI.test');
-});
+// Route::get('/jabatan', function () {
+//     return view('Jabatan.index');
+// });
+
+Route::resource('jabatan','Master\JabatanController');

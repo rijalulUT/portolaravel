@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="fixed">
+<html class="dark">
 
 	<head>
 
@@ -285,7 +285,7 @@
 								<ul class="nav nav-main">
 
 									<li class="nav-active">
-										<a href="test">
+										<a href="master">
 											<i class="fa fa-home" aria-hidden="true"></i>
 											<span>Home</span>
 										</a>
@@ -293,10 +293,10 @@
 
 
 									<li>
-										<a href= @yield('link')>
+										<a href= {{url('jabatan')}}>
 											<span class="pull-right label label-primary">@yield('count')</span>
 											<i class="fa fa-folder" aria-hidden="true"></i>
-											<span>@yield('title_menu')</span>
+											<span>Master Pejabat</span>
 										</a>
 									</li>
 
