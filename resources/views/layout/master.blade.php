@@ -1,5 +1,6 @@
 <!doctype html>
 <html class="fixed">
+
 	<head>
 
 		<!-- Basic -->
@@ -36,6 +37,7 @@
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
 
+		@yield('css')
 		<!-- Head Libs -->
 		<script src="assets/vendor/modernizr/modernizr.js"></script>
 
@@ -291,10 +293,10 @@
 
 
 									<li>
-										<a href="mailbox-folder.html">
+										<a href= @yield('link')>
 											<span class="pull-right label label-primary">@yield('count')</span>
 											<i class="fa fa-folder" aria-hidden="true"></i>
-											<span>Master Jabatan</span>
+											<span>@yield('title_menu')</span>
 										</a>
 									</li>
 
@@ -447,5 +449,8 @@
 
 		<!-- Examples -->
 		<script src="assets/javascripts/dashboard/examples.dashboard.js"></script>
+
+		<!-- CSS from section -->
+		@yield('css_footer')
 	</body>
 </html>
