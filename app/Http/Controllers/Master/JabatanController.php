@@ -52,7 +52,13 @@ class JabatanController extends Controller
      */
     public function show($id)
     {
-        //
+        $data = new Jabatan;
+        $jabatans = $data->ShowJabatan($id);
+
+        foreach ($jabatans as $key => $jabatan) {
+           return view('Jabatan.show',compact('jabatan'));
+        }
+
     }
 
     /**

@@ -11,4 +11,13 @@ class Jabatan
       $table = DB::select( DB::raw("SELECT * FROM m_pejabat"));
       return $table;
     }
+
+    public static function ShowJabatan($id)
+    {
+      $select = DB::select( DB::raw("SELECT * FROM m_pejabat WHERE kode_pejabat = :id"), array(
+       'id' => $id,
+       ));
+
+       return $select;
+    }
 }
