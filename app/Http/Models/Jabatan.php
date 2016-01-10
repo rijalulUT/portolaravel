@@ -20,4 +20,9 @@ class Jabatan
 
        return $select;
     }
+
+    public static function IsiJabatan($value='')
+    {
+      # code...
+    }
 }

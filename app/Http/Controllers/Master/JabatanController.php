@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Http\Models\Jabatan;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Input;
+
 class JabatanController extends Controller
 {
     /**
@@ -30,7 +33,7 @@ class JabatanController extends Controller
      */
     public function create()
     {
-        //
+        return view('Jabatan.create');
     }
 
     /**
@@ -41,7 +44,21 @@ class JabatanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (Input::get('simpan')){
+
+          $kode_pejabat = $request->input('kode_pejabat');
+          $kode_fakultas = $request->input('kode_fakultas');
+          $nama_pejabat = $request->input('nama_pejabat');
+          $keterangan_jabatan = $request->input('keterangan_jabatan');
+          $status_aktif = $request->input('status_aktif');
+          $kode_jabatan = $request->input('kode_jabatan');
+          $nip = $request->input('nip');
+          $nip18 = $request->input('nip18');
+
+          
+        }else{
+            return redirect('jabatan');
+        }
     }
 
     /**

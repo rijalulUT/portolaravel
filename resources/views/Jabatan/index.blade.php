@@ -2,8 +2,8 @@
 
 @section('css')
 <!-- Specific Page Vendor CSS -->
-<link rel="stylesheet" href="assets/vendor/select2/select2.css" />
-<link rel="stylesheet" href="assets/vendor/jquery-datatables-bs3/assets/css/datatables.css" />
+<link rel="stylesheet" href="{{ URL::asset('assets/vendor/select2/select2.css') }}" />
+<link rel="stylesheet" href="{{ URL::asset('assets/vendor/jquery-datatables-bs3/assets/css/datatables.css') }}" />
 @endsection
 
 @section('title')
@@ -17,8 +17,8 @@ Master Pejabat
 @section('header_title')
 List Master Pejabat
 @endsection
-@section('content')
 
+@section('content')
   <!-- Table Details -->
               <a href="{{url('/jabatan/create')}}" class="btn btn-success">Tambah Data</a>
 							<br>
@@ -61,32 +61,30 @@ List Master Pejabat
                     @endforeach
 									</tbody>
 								</table>
-
             <!-- END Table Details -->
 					<!-- end: page -->
-
-    @endsection
+@endsection
 
     @section('css_footer')
 
     <!-- Specific Page Vendor -->
-    <script src="assets/vendor/select2/select2.js"></script>
-    <script src="assets/vendor/jquery-datatables/media/js/jquery.dataTables.js"></script>
-    <script src="assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js"></script>
-    <script src="assets/vendor/jquery-datatables-bs3/assets/js/datatables.js"></script>
+    <script src="{{ URL::asset('assets/vendor/select2/select2.js') }}"></script>
+    <script src="{{ URL::asset('assets/vendor/jquery-datatables/media/js/jquery.dataTables.js') }}"></script>
+    <script src="{{ URL::asset('assets/vendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/vendor/jquery-datatables-bs3/assets/js/datatables.js') }}"></script>
 
 		<!-- Theme Base, Components and Settings -->
-		<script src="assets/javascripts/theme.js"></script>
+		<script src="{{ URL::asset('assets/javascripts/theme.js') }}"></script>
 
 		<!-- Theme Custom -->
-		<script src="assets/javascripts/theme.custom.js"></script>
+		<script src="{{ URL::asset('assets/javascripts/theme.custom.js') }}"></script>
 
 		<!-- Theme Initialization Files -->
-		<script src="assets/javascripts/theme.init.js"></script>
+		<script src="{{ URL::asset('assets/javascripts/theme.init.js') }}"></script>
 
     <!-- Examples -->
-    <script src="assets/javascripts/tables/examples.datatables.default.js"></script>
-    <script src="assets/javascripts/tables/examples.datatables.row.with.details.js"></script>
-    <script src="assets/javascripts/tables/examples.datatables.tabletools.js"></script>
+    <script src="{{ URL::asset('assets/javascripts/tables/examples.datatables.default.js') }}"></script>
+    <script src="{{ URL::asset('assets/javascripts/tables/examples.datatables.row.with.details.js') }}"></script>
+    <script src="{{ URL::asset('assets/javascripts/tables/examples.datatables.tabletools.js') }}"></script>
 
     @endsection
