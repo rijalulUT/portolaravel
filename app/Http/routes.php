@@ -15,18 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/test', function () {
-//     return view('porto.index');
-// });
 
-Route::get('master', function () {
-    return view('jabatan.main');
-});
-
-Route::get('coba', function () {
-    return view('GUI.coba');
-});
-Route::get('test', function () {
-    return view('jabatan.main');
-});
 Route::resource('jabatan','Master\JabatanController');
+
+// Route::controller('','Master\TestController');
+//
+// Route::controller('','Master\Test2Controller');

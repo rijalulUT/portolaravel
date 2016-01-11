@@ -326,17 +326,9 @@
 					</header>
 
 					<!-- start: page -->
-					<section class="panel">
-						<header class="panel-heading">
-							<div class="panel-actions">
-								<a href="#" class="fa fa-caret-down"></a>
-								<a href="#" class="fa fa-times"></a>
-							</div>
-							<h2 class="panel-title">@yield('header_title')</h2>
-						</header>
-						<div class="panel-body">
+
 					  @yield('content')
-						</div>
+				
 					<!-- end: page -->
 					</section>
 				</section>

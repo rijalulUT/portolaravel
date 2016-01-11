@@ -19,50 +19,62 @@ List Master Pejabat
 @endsection
 
 @section('content')
-  <!-- Table Details -->
-              <a href="{{url('/jabatan/create')}}" class="btn btn-success">Tambah Data</a>
-							<br>
-							<br>
-								<table class="table table-bordered table-striped mb-none" id="datatable-default">
-									<thead>
-										<tr>
-											<th>Kode Pejabat</th>
-                      <th>Kode Fakultas</th>
-											<th>Nama Pejabat</th>
-											<th>Keterangan Jabatan</th>
-											<th>Status Aktif</th>
-											<th>Kode Jabatan</th>
-                      <th>NIP</th>
-                      <th>NIP 18</th>
-                      <th></th>
-                      <th></th>
-                      <th></th>
-										</tr>
-									</thead>
-									<tbody>
-                    @foreach($tables as $key => $table)
-										<tr class="gradeX">
-											<td>{{$table->kode_pejabat}}</td>
-											<td>{{$table->kode_fakultas}}</td>
-											<td>{{$table->nama_pejabat}}</td>
-											<td>{{$table->keterangan_jabatan}}</td>
-                      <td>{{$table->status_aktif}}</td>
-                      <td>{{$table->kode_jabatan}}</td>
-                      <td>{{$table->nip}}</td>
-                      <td>{{$table->nip18}}</td>
-                      <td><a href="{{url('jabatan',$table->kode_pejabat)}}" class="btn btn-primary">Lihat</a></td>
-                      <td><a href="{{route('jabatan.edit',$table->kode_pejabat)}}" class="btn btn-warning">Ubah</a></td>
-                      <td>
-                        {!! Form::open(['method' => 'DELETE', 'route'=>['jabatan.destroy', $table->kode_pejabat]]) !!}
-                        {!! Form::submit('Hapus', ['class' => 'btn btn-danger']) !!}
-                        {!! Form::close() !!}
-                      </td>
-										</tr>
-                    @endforeach
-									</tbody>
-								</table>
-            <!-- END Table Details -->
-					<!-- end: page -->
+<!-- Memasukkan table kedalam panel -->
+  <section class="panel">
+    <header class="panel-heading">
+      <div class="panel-actions">
+        <a href="#" class="fa fa-caret-down"></a>
+        <a href="#" class="fa fa-times"></a>
+      </div>
+      <h2 class="panel-title">List Master Pejabat</h2>
+    </header>
+    <div class="panel-body">
+
+          <!-- Start: Isi Halaman -->
+                <a href="{{url('/jabatan/create')}}" class="btn btn-success">Tambah Data</a>
+  							<br>
+  							<br>
+  								<table class="table table-bordered table-striped mb-none" id="datatable-default">
+  									<thead>
+  										<tr>
+  											<th>Kode Pejabat</th>
+                        <th>Kode Fakultas</th>
+  											<th>Nama Pejabat</th>
+  											<th>Keterangan Jabatan</th>
+  											<th>Status Aktif</th>
+  											<th>Kode Jabatan</th>
+                        <th>NIP</th>
+                        <th>NIP 18</th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+  										</tr>
+  									</thead>
+  									<tbody>
+                      @foreach($tables as $key => $table)
+  										<tr class="gradeX">
+  											<td>{{$table->kode_pejabat}}</td>
+  											<td>{{$table->kode_fakultas}}</td>
+  											<td>{{$table->nama_pejabat}}</td>
+  											<td>{{$table->keterangan_jabatan}}</td>
+                        <td>{{$table->status_aktif}}</td>
+                        <td>{{$table->kode_jabatan}}</td>
+                        <td>{{$table->nip}}</td>
+                        <td>{{$table->nip18}}</td>
+                        <td><a href="{{url('jabatan',$table->kode_pejabat.'_'.$table->status_aktif)}}" class="btn btn-primary">Lihat</a></td>
+                        <td><a href="{{route('jabatan.edit',$table->kode_pejabat.'_'.$table->status_aktif)}}" class="btn btn-warning">Ubah</a></td>
+                        <td>
+                          {!! Form::open(['method' => 'DELETE', 'route'=>['jabatan.destroy', $table->kode_pejabat]]) !!}
+                          {!! Form::submit('Hapus', ['class' => 'btn btn-danger']) !!}
+                          {!! Form::close() !!}
+                        </td>
+  										</tr>
+                      @endforeach
+  									</tbody>
+  								</table>
+                  <!-- END: Isi Halaman -->
+  <!-- Penutup Panel -->
+	</div>
 @endsection
 
     @section('css_footer')

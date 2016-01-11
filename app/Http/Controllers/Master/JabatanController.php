@@ -21,6 +21,8 @@ class JabatanController extends Controller
     {
         $data= new Jabatan();
         $tables = $data->TableJabatan();
+        $a= 'a';
+        $b = 'b';
 
         return view('Jabatan.index',compact('tables'));
 
@@ -44,18 +46,19 @@ class JabatanController extends Controller
      */
     public function store(Request $request)
     {
+      $kode_pejabat = $request->input('kode_pejabat');
+      $kode_fakultas = $request->input('kode_fakultas');
+      $nama_pejabat = $request->input('nama_pejabat');
+      $keterangan_jabatan = $request->input('keterangan_jabatan');
+      $status_aktif = $request->input('status_aktif');
+      $kode_jabatan = $request->input('kode_jabatan');
+      $nip = $request->input('nip');
+      $nip18 = $request->input('nip18');
+
         if (Input::get('simpan')){
-
-          $kode_pejabat = $request->input('kode_pejabat');
-          $kode_fakultas = $request->input('kode_fakultas');
-          $nama_pejabat = $request->input('nama_pejabat');
-          $keterangan_jabatan = $request->input('keterangan_jabatan');
-          $status_aktif = $request->input('status_aktif');
-          $kode_jabatan = $request->input('kode_jabatan');
-          $nip = $request->input('nip');
-          $nip18 = $request->input('nip18');
-
-          
+            $data = new Jabatan;
+            $store = $data->IsiJabatan($kode_pejabat,$kode_fakultas,$nama_pejabat,$keterangan_jabatan,$status_aktif,$kode_jabatan,$nip,$nip18);
+            return redirect('jabatan');
         }else{
             return redirect('jabatan');
         }
@@ -69,13 +72,17 @@ class JabatanController extends Controller
      */
     public function show($id)
     {
+        $array_id = explode('_',$id);
+        $kode_pejabat= $array_id[0];
+        $status_aktif = $array_id[1];
+
         $data = new Jabatan;
-        $jabatans = $data->ShowJabatan($id);
+        $jabatans = $data->ShowJabatan($kode_pejabat,$status_aktif);
 
         foreach ($jabatans as $key => $jabatan) {
            return view('Jabatan.show',compact('jabatan'));
         }
-
+        //return $kode_pejabat;
     }
 
     /**
@@ -86,7 +93,17 @@ class JabatanController extends Controller
      */
     public function edit($id)
     {
-        //
+      $array_id = explode('_',$id);
+      $kode_pejabat= $array_id[0];
+      $status_aktif = $array_id[1];
+
+      $data = new Jabatan;
+      $jabatans = $data->ShowJabatan($kode_pejabat,$status_aktif);
+
+      foreach ($jabatans as $key => $jabatan) {
+         return view('Jabatan.edit',compact('jabatan'));
+      }
+
     }
 
     /**
@@ -98,7 +115,12 @@ class JabatanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+          if (Input::get('ubah')){
+
+          }else{
+            return redirect('jabatan');
+          }
+
     }
 
     /**
