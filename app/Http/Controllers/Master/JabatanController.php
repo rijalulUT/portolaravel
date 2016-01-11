@@ -21,8 +21,6 @@ class JabatanController extends Controller
     {
         $data= new Jabatan();
         $tables = $data->TableJabatan();
-        $a= 'a';
-        $b = 'b';
 
         return view('Jabatan.index',compact('tables'));
 
@@ -115,7 +113,19 @@ class JabatanController extends Controller
      */
     public function update(Request $request, $id)
     {
+      $kode_pejabat = $request->input('kode_pejabat');
+      $kode_fakultas = $request->input('kode_fakultas');
+      $nama_pejabat = $request->input('nama_pejabat');
+      $keterangan_jabatan = $request->input('keterangan_jabatan');
+      $status_aktif = $request->input('status_aktif');
+      $kode_jabatan = $request->input('kode_jabatan');
+      $nip = $request->input('nip');
+      $nip18 = $request->input('nip18');
           if (Input::get('ubah')){
+
+              $data = new Jabatan;
+              $ubah = $data->EditJabatan($kode_pejabat,$kode_fakultas,$nama_pejabat,$keterangan_jabatan,$status_aktif,$kode_jabatan,$nip,$nip18);
+              return redirect('jabatan');
 
           }else{
             return redirect('jabatan');
@@ -131,6 +141,8 @@ class JabatanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data = new Jabatan;
+        $hapus = $data->HapusJabatan($id);
+        return redirect('jabatan');
     }
 }

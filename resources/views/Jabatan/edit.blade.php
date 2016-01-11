@@ -19,49 +19,49 @@ Ubah Data Pejabat
         <div class="form-group">
             <label for="isbn" class="col-sm-2 control-label">Kode Pejabat</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="Nomor" value= '{{$jabatan->kode_pejabat}}' readonly>
+                <input type="text" class="form-control" name="kode_pejabat" value= '{{$jabatan->kode_pejabat}}' readonly>
             </div>
         </div>
         <div class="form-group">
             <label for="title" class="col-sm-2 control-label">Kode Fakultas</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nim" value='{{$jabatan->kode_fakultas}}' readonly>
+                <input type="text" class="form-control" name="kode_fakultas" value='{{$jabatan->kode_fakultas}}'>
             </div>
         </div>
         <div class="form-group">
             <label for="author" class="col-sm-2 control-label">Nama Pejabat</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nama" value='{{$jabatan->nama_pejabat}}'>
+                <input type="text" class="form-control" name="nama_pejabat" value='{{$jabatan->nama_pejabat}}'>
             </div>
         </div>
         <div class="form-group">
             <label for="author" class="col-sm-2 control-label">Keterangan Jabatan</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nama" value='{{$jabatan->keterangan_jabatan}}' >
+                <input type="text" class="form-control" name="keterangan_jabatan" value='{{$jabatan->keterangan_jabatan}}' >
             </div>
         </div>
         <div class="form-group">
             <label for="author" class="col-sm-2 control-label">Status Aktif</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nama" value='{{$jabatan->status_aktif}}'>
+                <input type="text" class="form-control" name="status_aktif" value='{{$jabatan->status_aktif}}'>
             </div>
         </div>
         <div class="form-group">
             <label for="author" class="col-sm-2 control-label">Kode Jabatan</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nama" value='{{$jabatan->kode_jabatan}}'>
+                <input type="text" class="form-control" name="kode_jabatan" value='{{$jabatan->kode_jabatan}}'>
             </div>
         </div>
         <div class="form-group">
             <label for="author" class="col-sm-2 control-label">NIP</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nama" value='{{$jabatan->nip}}'>
+                <input type="text" class="form-control" name="nip" value='{{$jabatan->nip}}'>
             </div>
         </div>
         <div class="form-group">
             <label for="author" class="col-sm-2 control-label">NIP 18</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="nama" value='{{$jabatan->nip18}}'>
+                <input type="text" class="form-control" name="nip18" value='{{$jabatan->nip18}}'>
             </div>
         </div>
         <div class="col-sm-offset-2 col-sm-10">
