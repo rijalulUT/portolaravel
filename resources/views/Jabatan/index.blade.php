@@ -1,6 +1,6 @@
 @extends('layout.master')
 
-@section('css')
+@section('css_menu')
 <!-- Specific Page Vendor CSS -->
 <link rel="stylesheet" href="{{ URL::asset('assets/vendor/select2/select2.css') }}" />
 <link rel="stylesheet" href="{{ URL::asset('assets/vendor/jquery-datatables-bs3/assets/css/datatables.css') }}" />

@@ -12,12 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('wellcome');
 });
 
 
 Route::resource('jabatan','Master\JabatanController');
-
-// Route::controller('','Master\TestController');
-//
-// Route::controller('','Master\Test2Controller');
+Route::get('master', function () {
+    return view('Jabatan\main');
+});
