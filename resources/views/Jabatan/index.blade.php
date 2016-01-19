@@ -14,10 +14,6 @@ Master Pejabat
 Master Pejabat
 @endsection
 
-@section('header_title')
-List Master Pejabat
-@endsection
-
 @section('content')
 <!-- Memasukkan table kedalam panel -->
   <section class="panel">

@@ -10,10 +10,13 @@
 		<!-- Mobile Metas -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+		<!-- Memanggil CSS untuk master layout -->
     @include('layout.css')
 
+
+		<!-- tempat untuk menaruh CSS dari page -->
 		@yield('css_menu')
-		<!-- Head Libs -->
+
 		<script src="{{ URL::asset('assets/vendor/modernizr/modernizr.js') }}"></script>
 
 	</head>
@@ -354,9 +357,10 @@
 			</aside>
 		</section>
 
-
+   	<!-- Memanggil Script untuk master layout -->
     @include('layout.script')
-		<!-- CSS from section -->
+		
+			<!-- tempat untuk menaruh script dari page -->
 		@yield('css_footer')
 	</body>
 </html>
